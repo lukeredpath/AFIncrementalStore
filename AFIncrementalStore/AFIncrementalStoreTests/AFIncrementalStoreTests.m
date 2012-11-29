@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 LJR Software Ltd. All rights reserved.
 //
 
-#import "AFIncrementalStoreTests.h"
+#import "SenTestMacros.h"
 
-@implementation AFIncrementalStoreTests
+DEFINE_TEST_CASE(AFIncrementalStoreTests)
 
 - (void)setUp
 {
@@ -24,9 +24,4 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in AFIncrementalStoreTests");
-}
-
-@end
+END_TEST_CASE

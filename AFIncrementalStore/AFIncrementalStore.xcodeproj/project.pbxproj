@@ -56,7 +56,6 @@
 		A30489A11667C457009511CB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A30489AB1667C457009511CB /* AFIncrementalStoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFIncrementalStoreTests-Info.plist"; sourceTree = "<group>"; };
 		A30489AD1667C457009511CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A30489AF1667C457009511CB /* AFIncrementalStoreTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFIncrementalStoreTests.h; sourceTree = "<group>"; };
 		A30489B01667C457009511CB /* AFIncrementalStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFIncrementalStoreTests.m; sourceTree = "<group>"; };
 		A30489C11667C567009511CB /* AFIncrementalStore-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFIncrementalStore-Prefix.pch"; sourceTree = "<group>"; };
 		A30489C21667C567009511CB /* AFIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFIncrementalStore.h; sourceTree = "<group>"; };
@@ -83,6 +82,8 @@
 		A30489F31667C61A009511CB /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		A30489F41667C61A009511CB /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		A30489FE1667C665009511CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3048A001667C71C009511CB /* SenTestMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestMacros.h; path = "../../../../clients/lshift/can-ios/CANEventStreamerTests/Support/SenTestMacros.h"; sourceTree = "<group>"; };
+		A3048A011667C76C009511CB /* AFIncrementalStoreTests-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFIncrementalStoreTests-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +118,9 @@
 				A30489911667C457009511CB /* Frameworks */,
 				A30489901667C457009511CB /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		A30489901667C457009511CB /* Products */ = {
 			isa = PBXGroup;
@@ -161,7 +164,6 @@
 		A30489A91667C457009511CB /* AFIncrementalStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				A30489AF1667C457009511CB /* AFIncrementalStoreTests.h */,
 				A30489B01667C457009511CB /* AFIncrementalStoreTests.m */,
 				A30489AA1667C457009511CB /* Supporting Files */,
 			);
@@ -171,6 +173,8 @@
 		A30489AA1667C457009511CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3048A011667C76C009511CB /* AFIncrementalStoreTests-prefix.pch */,
+				A3048A001667C71C009511CB /* SenTestMacros.h */,
 				A30489AB1667C457009511CB /* AFIncrementalStoreTests-Info.plist */,
 				A30489AC1667C457009511CB /* InfoPlist.strings */,
 			);
@@ -427,7 +431,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AFIncrementalStore/AFIncrementalStore-Prefix.pch";
+				GCC_PREFIX_HEADER = "AFIncrementalStoreTests/AFIncrementalStoreTests-Prefix.pch";
 				INFOPLIST_FILE = "AFIncrementalStoreTests/AFIncrementalStoreTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -442,7 +446,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AFIncrementalStore/AFIncrementalStore-Prefix.pch";
+				GCC_PREFIX_HEADER = "AFIncrementalStoreTests/AFIncrementalStoreTests-Prefix.pch";
 				INFOPLIST_FILE = "AFIncrementalStoreTests/AFIncrementalStoreTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
