@@ -10,4 +10,6 @@
     #import <Foundation/Foundation.h>
     #import <SenTestingKit/SenTestingKit.h>
     #import "SenTestMacros.h"
+#define EXP_SHORTHAND
+    #import "Expecta.h"
 #endif

@@ -12,7 +12,7 @@
 		A30489A51667C457009511CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30489921667C457009511CB /* Foundation.framework */; };
 		A30489A81667C457009511CB /* libAFIncrementalStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A304898F1667C457009511CB /* libAFIncrementalStore.a */; };
 		A30489AE1667C457009511CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A30489AC1667C457009511CB /* InfoPlist.strings */; };
-		A30489B11667C457009511CB /* AFIncrementalStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489B01667C457009511CB /* AFIncrementalStoreTests.m */; };
+		A30489B11667C457009511CB /* AFIncrementalStoreIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489B01667C457009511CB /* AFIncrementalStoreIntegrationTests.m */; };
 		A30489C61667C567009511CB /* AFIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489C31667C567009511CB /* AFIncrementalStore.m */; };
 		A30489C71667C567009511CB /* AFRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489C51667C567009511CB /* AFRESTClient.m */; };
 		A30489F51667C61A009511CB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489E31667C61A009511CB /* AFHTTPClient.m */; };
@@ -25,6 +25,12 @@
 		A30489FC1667C61A009511CB /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489F21667C61A009511CB /* AFXMLRequestOperation.m */; };
 		A30489FD1667C61A009511CB /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A30489F41667C61A009511CB /* UIImageView+AFNetworking.m */; };
 		A30489FF1667C665009511CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30489FE1667C665009511CB /* UIKit.framework */; };
+		A3048A031667C831009511CB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3048A021667C831009511CB /* CoreData.framework */; };
+		A3048A1B1667E801009511CB /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = A3048A111667E801009511CB /* OHHTTPStubs.m */; };
+		A3048A1C1667E801009511CB /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A3048A161667E801009511CB /* OHHTTPStubsResponse.m */; };
+		A37C0BB2166832F400C774CD /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A37C0BAD166832E900C774CD /* libExpecta-iOS.a */; };
+		A37C0BCE1668E82900C774CD /* AFServerStub.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BCD1668E82900C774CD /* AFServerStub.m */; };
+		A37C0BD11668E92C00C774CD /* NSManagedObjectContextChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BD01668E92C00C774CD /* NSManagedObjectContextChangeObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = A304898E1667C457009511CB;
 			remoteInfo = AFIncrementalStore;
+		};
+		A37C0BAA166832E900C774CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
+			remoteInfo = Expecta;
+		};
+		A37C0BAC166832E900C774CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
+		A37C0BAE166832E900C774CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF1D13B2DD520010F4D7;
+			remoteInfo = ExpectaTests;
+		};
+		A37C0BB0166832E900C774CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOSTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,7 +90,7 @@
 		A30489A11667C457009511CB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A30489AB1667C457009511CB /* AFIncrementalStoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFIncrementalStoreTests-Info.plist"; sourceTree = "<group>"; };
 		A30489AD1667C457009511CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A30489B01667C457009511CB /* AFIncrementalStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFIncrementalStoreTests.m; sourceTree = "<group>"; };
+		A30489B01667C457009511CB /* AFIncrementalStoreIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFIncrementalStoreIntegrationTests.m; sourceTree = "<group>"; };
 		A30489C11667C567009511CB /* AFIncrementalStore-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFIncrementalStore-Prefix.pch"; sourceTree = "<group>"; };
 		A30489C21667C567009511CB /* AFIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFIncrementalStore.h; sourceTree = "<group>"; };
 		A30489C31667C567009511CB /* AFIncrementalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFIncrementalStore.m; sourceTree = "<group>"; };
@@ -84,6 +118,16 @@
 		A30489FE1667C665009511CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3048A001667C71C009511CB /* SenTestMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestMacros.h; path = "../../../../clients/lshift/can-ios/CANEventStreamerTests/Support/SenTestMacros.h"; sourceTree = "<group>"; };
 		A3048A011667C76C009511CB /* AFIncrementalStoreTests-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFIncrementalStoreTests-prefix.pch"; sourceTree = "<group>"; };
+		A3048A021667C831009511CB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3048A101667E801009511CB /* OHHTTPStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubs.h; sourceTree = "<group>"; };
+		A3048A111667E801009511CB /* OHHTTPStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubs.m; sourceTree = "<group>"; };
+		A3048A151667E801009511CB /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubsResponse.h; sourceTree = "<group>"; };
+		A3048A161667E801009511CB /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubsResponse.m; sourceTree = "<group>"; };
+		A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = Vendor/Expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
+		A37C0BCC1668E82900C774CD /* AFServerStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFServerStub.h; path = Support/AFServerStub.h; sourceTree = "<group>"; };
+		A37C0BCD1668E82900C774CD /* AFServerStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFServerStub.m; path = Support/AFServerStub.m; sourceTree = "<group>"; };
+		A37C0BCF1668E92C00C774CD /* NSManagedObjectContextChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSManagedObjectContextChangeObserver.h; path = Support/NSManagedObjectContextChangeObserver.h; sourceTree = "<group>"; };
+		A37C0BD01668E92C00C774CD /* NSManagedObjectContextChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSManagedObjectContextChangeObserver.m; path = Support/NSManagedObjectContextChangeObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37C0BB2166832F400C774CD /* libExpecta-iOS.a in Frameworks */,
+				A3048A031667C831009511CB /* CoreData.framework in Frameworks */,
 				A30489FF1667C665009511CB /* UIKit.framework in Frameworks */,
 				A30489A21667C457009511CB /* SenTestingKit.framework in Frameworks */,
 				A30489A51667C457009511CB /* Foundation.framework in Frameworks */,
@@ -134,6 +180,7 @@
 		A30489911667C457009511CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3048A021667C831009511CB /* CoreData.framework */,
 				A30489FE1667C665009511CB /* UIKit.framework */,
 				A30489921667C457009511CB /* Foundation.framework */,
 				A30489A11667C457009511CB /* SenTestingKit.framework */,
@@ -164,7 +211,8 @@
 		A30489A91667C457009511CB /* AFIncrementalStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				A30489B01667C457009511CB /* AFIncrementalStoreTests.m */,
+				A30489B01667C457009511CB /* AFIncrementalStoreIntegrationTests.m */,
+				A37C0BCB1668E7EA00C774CD /* Support */,
 				A30489AA1667C457009511CB /* Supporting Files */,
 			);
 			path = AFIncrementalStoreTests;
@@ -173,6 +221,8 @@
 		A30489AA1667C457009511CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */,
+				A3048A0F1667E801009511CB /* OHHTTPStubs */,
 				A3048A011667C76C009511CB /* AFIncrementalStoreTests-prefix.pch */,
 				A3048A001667C71C009511CB /* SenTestMacros.h */,
 				A30489AB1667C457009511CB /* AFIncrementalStoreTests-Info.plist */,
@@ -206,6 +256,40 @@
 			);
 			name = AFNetworking;
 			path = ../AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		A3048A0F1667E801009511CB /* OHHTTPStubs */ = {
+			isa = PBXGroup;
+			children = (
+				A3048A101667E801009511CB /* OHHTTPStubs.h */,
+				A3048A111667E801009511CB /* OHHTTPStubs.m */,
+				A3048A151667E801009511CB /* OHHTTPStubsResponse.h */,
+				A3048A161667E801009511CB /* OHHTTPStubsResponse.m */,
+			);
+			name = OHHTTPStubs;
+			path = Vendor/OHHTTPStubs/OHHTTPStubs;
+			sourceTree = "<group>";
+		};
+		A37C0BA4166832E900C774CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A37C0BAB166832E900C774CD /* libExpecta.a */,
+				A37C0BAD166832E900C774CD /* libExpecta-iOS.a */,
+				A37C0BAF166832E900C774CD /* ExpectaTests.octest */,
+				A37C0BB1166832E900C774CD /* Expecta-iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A37C0BCB1668E7EA00C774CD /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A37C0BCF1668E92C00C774CD /* NSManagedObjectContextChangeObserver.h */,
+				A37C0BD01668E92C00C774CD /* NSManagedObjectContextChangeObserver.m */,
+				A37C0BCC1668E82900C774CD /* AFServerStub.h */,
+				A37C0BCD1668E82900C774CD /* AFServerStub.m */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +350,12 @@
 			mainGroup = A30489841667C457009511CB;
 			productRefGroup = A30489901667C457009511CB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A37C0BA4166832E900C774CD /* Products */;
+					ProjectRef = A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A304898E1667C457009511CB /* AFIncrementalStore */,
@@ -273,6 +363,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A37C0BAB166832E900C774CD /* libExpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpecta.a;
+			remoteRef = A37C0BAA166832E900C774CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A37C0BAD166832E900C774CD /* libExpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libExpecta-iOS.a";
+			remoteRef = A37C0BAC166832E900C774CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A37C0BAF166832E900C774CD /* ExpectaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExpectaTests.octest;
+			remoteRef = A37C0BAE166832E900C774CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A37C0BB1166832E900C774CD /* Expecta-iOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Expecta-iOSTests.octest";
+			remoteRef = A37C0BB0166832E900C774CD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A304899D1667C457009511CB /* Resources */ = {
@@ -315,7 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A30489B11667C457009511CB /* AFIncrementalStoreTests.m in Sources */,
+				A30489B11667C457009511CB /* AFIncrementalStoreIntegrationTests.m in Sources */,
 				A30489F51667C61A009511CB /* AFHTTPClient.m in Sources */,
 				A30489F61667C61A009511CB /* AFHTTPRequestOperation.m in Sources */,
 				A30489F71667C61A009511CB /* AFImageRequestOperation.m in Sources */,
@@ -325,6 +446,10 @@
 				A30489FB1667C61A009511CB /* AFURLConnectionOperation.m in Sources */,
 				A30489FC1667C61A009511CB /* AFXMLRequestOperation.m in Sources */,
 				A30489FD1667C61A009511CB /* UIImageView+AFNetworking.m in Sources */,
+				A3048A1B1667E801009511CB /* OHHTTPStubs.m in Sources */,
+				A3048A1C1667E801009511CB /* OHHTTPStubsResponse.m in Sources */,
+				A37C0BCE1668E82900C774CD /* AFServerStub.m in Sources */,
+				A37C0BD11668E92C00C774CD /* NSManagedObjectContextChangeObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +557,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFIncrementalStoreTests/AFIncrementalStoreTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/$(TARGET_NAME)/Vendor/Expecta/src/**";
 				INFOPLIST_FILE = "AFIncrementalStoreTests/AFIncrementalStoreTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -447,7 +574,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFIncrementalStoreTests/AFIncrementalStoreTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/$(TARGET_NAME)/Vendor/Expecta/src/**";
 				INFOPLIST_FILE = "AFIncrementalStoreTests/AFIncrementalStoreTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

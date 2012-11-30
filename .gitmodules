@@ -1,3 +1,9 @@
 [submodule "AFNetworking"]
 	path = AFNetworking
 	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "AFIncrementalStore/AFIncrementalStoreTests/Vendor/OHHTTPStubs"]
+	path = AFIncrementalStore/AFIncrementalStoreTests/Vendor/OHHTTPStubs
+	url = git://github.com/AliSoftware/OHHTTPStubs.git
+[submodule "AFIncrementalStore/AFIncrementalStoreTests/Vendor/Expecta"]
+	path = AFIncrementalStore/AFIncrementalStoreTests/Vendor/Expecta
+	url = git://github.com/petejkim/expecta.git
