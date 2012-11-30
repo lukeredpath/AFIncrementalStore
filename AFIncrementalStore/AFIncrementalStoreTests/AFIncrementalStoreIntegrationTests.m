@@ -11,6 +11,7 @@
 #import "AFRESTClient.h"
 #import "AFServerStub.h"
 #import "NSManagedObjectContextChangeObserver.h"
+#import "AFManagedObjectModelBuilder.h"
 
 @interface TestCaseIncrementalStore : AFIncrementalStore
 @end
@@ -34,30 +35,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _model = [[NSManagedObjectModel alloc] init];
-        
-        [self defineModel:_model];
     });
     
     return _model;
-}
-
-+ (void)defineModel:(NSManagedObjectModel *)model
-{
-    NSEntityDescription *widgetEntity = [[NSEntityDescription alloc] init];
-    widgetEntity.name = @"Widget";
-    
-    NSAttributeDescription *hrefAttribute = [[NSAttributeDescription alloc] init];
-    hrefAttribute.name = @"href";
-    hrefAttribute.attributeType = NSStringAttributeType;
-    hrefAttribute.indexed = YES;
-    
-    NSAttributeDescription *nameAttribute = [[NSAttributeDescription alloc] init];
-    nameAttribute.name = @"name";
-    nameAttribute.attributeType = NSStringAttributeType;
-    
-    [widgetEntity setProperties:@[hrefAttribute, nameAttribute]];
-    
-    [model setEntities:@[widgetEntity]];
 }
 
 @end
@@ -138,6 +118,15 @@ DEFINE_TEST_CASE(AFIncrementalStoreIntegrationTests) {
     [super setUp];
     
     NSManagedObjectModel *model = [TestCaseIncrementalStore model];
+    
+    AFManagedObjectModelBuilder *builder = [[AFManagedObjectModelBuilder alloc] initWithManagedObjectModel:model];
+    
+    [builder defineEntityNamed:@"Widget" definition:^(AFEntityDefinition *definition) {
+        [definition addAttribute:@"href" type:NSStringAttributeType isIndexed:YES];
+        [definition addAttribute:@"name" type:NSStringAttributeType isIndexed:NO];
+    }];
+    
+    [builder build];
     
     NSAssert(model, @"Could not create a managed object model, aborting test case.");
 

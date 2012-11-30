@@ -29,8 +29,9 @@
 		A3048A1B1667E801009511CB /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = A3048A111667E801009511CB /* OHHTTPStubs.m */; };
 		A3048A1C1667E801009511CB /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A3048A161667E801009511CB /* OHHTTPStubsResponse.m */; };
 		A37C0BB2166832F400C774CD /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A37C0BAD166832E900C774CD /* libExpecta-iOS.a */; };
-		A37C0BCE1668E82900C774CD /* AFServerStub.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BCD1668E82900C774CD /* AFServerStub.m */; };
-		A37C0BD11668E92C00C774CD /* NSManagedObjectContextChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BD01668E92C00C774CD /* NSManagedObjectContextChangeObserver.m */; };
+		A37C0BDB1668E9ED00C774CD /* AFManagedObjectModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BD61668E9ED00C774CD /* AFManagedObjectModelBuilder.m */; };
+		A37C0BDC1668E9ED00C774CD /* AFServerStub.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BD81668E9ED00C774CD /* AFServerStub.m */; };
+		A37C0BDD1668E9ED00C774CD /* NSManagedObjectContextChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A37C0BDA1668E9ED00C774CD /* NSManagedObjectContextChangeObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,10 +125,12 @@
 		A3048A151667E801009511CB /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubsResponse.h; sourceTree = "<group>"; };
 		A3048A161667E801009511CB /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubsResponse.m; sourceTree = "<group>"; };
 		A37C0B7E166832DA00C774CD /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = Vendor/Expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
-		A37C0BCC1668E82900C774CD /* AFServerStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFServerStub.h; path = Support/AFServerStub.h; sourceTree = "<group>"; };
-		A37C0BCD1668E82900C774CD /* AFServerStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFServerStub.m; path = Support/AFServerStub.m; sourceTree = "<group>"; };
-		A37C0BCF1668E92C00C774CD /* NSManagedObjectContextChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSManagedObjectContextChangeObserver.h; path = Support/NSManagedObjectContextChangeObserver.h; sourceTree = "<group>"; };
-		A37C0BD01668E92C00C774CD /* NSManagedObjectContextChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSManagedObjectContextChangeObserver.m; path = Support/NSManagedObjectContextChangeObserver.m; sourceTree = "<group>"; };
+		A37C0BD51668E9ED00C774CD /* AFManagedObjectModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFManagedObjectModelBuilder.h; sourceTree = "<group>"; };
+		A37C0BD61668E9ED00C774CD /* AFManagedObjectModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFManagedObjectModelBuilder.m; sourceTree = "<group>"; };
+		A37C0BD71668E9ED00C774CD /* AFServerStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFServerStub.h; sourceTree = "<group>"; };
+		A37C0BD81668E9ED00C774CD /* AFServerStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFServerStub.m; sourceTree = "<group>"; };
+		A37C0BD91668E9ED00C774CD /* NSManagedObjectContextChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSManagedObjectContextChangeObserver.h; sourceTree = "<group>"; };
+		A37C0BDA1668E9ED00C774CD /* NSManagedObjectContextChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectContextChangeObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,12 +287,14 @@
 		A37C0BCB1668E7EA00C774CD /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				A37C0BCF1668E92C00C774CD /* NSManagedObjectContextChangeObserver.h */,
-				A37C0BD01668E92C00C774CD /* NSManagedObjectContextChangeObserver.m */,
-				A37C0BCC1668E82900C774CD /* AFServerStub.h */,
-				A37C0BCD1668E82900C774CD /* AFServerStub.m */,
+				A37C0BD51668E9ED00C774CD /* AFManagedObjectModelBuilder.h */,
+				A37C0BD61668E9ED00C774CD /* AFManagedObjectModelBuilder.m */,
+				A37C0BD71668E9ED00C774CD /* AFServerStub.h */,
+				A37C0BD81668E9ED00C774CD /* AFServerStub.m */,
+				A37C0BD91668E9ED00C774CD /* NSManagedObjectContextChangeObserver.h */,
+				A37C0BDA1668E9ED00C774CD /* NSManagedObjectContextChangeObserver.m */,
 			);
-			name = Support;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,8 +453,9 @@
 				A30489FD1667C61A009511CB /* UIImageView+AFNetworking.m in Sources */,
 				A3048A1B1667E801009511CB /* OHHTTPStubs.m in Sources */,
 				A3048A1C1667E801009511CB /* OHHTTPStubsResponse.m in Sources */,
-				A37C0BCE1668E82900C774CD /* AFServerStub.m in Sources */,
-				A37C0BD11668E92C00C774CD /* NSManagedObjectContextChangeObserver.m in Sources */,
+				A37C0BDB1668E9ED00C774CD /* AFManagedObjectModelBuilder.m in Sources */,
+				A37C0BDC1668E9ED00C774CD /* AFServerStub.m in Sources */,
+				A37C0BDD1668E9ED00C774CD /* NSManagedObjectContextChangeObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
